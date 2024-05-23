@@ -1,0 +1,27 @@
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-text {
+    font-size: 16px;
+  }
+  
+  .footer-icons {
+    display: flex;
+  }
+  
+  .footer-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .footer-icon:hover {
+    color: #55acee;
+  }
+  
