@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Swal from 'sweetalert2';
 import { Grid, TextField, Button, Container, Box, FormControl, InputLabel, Select, MenuItem, Typography } from '@mui/material';
 
 function AddTransactions() {
@@ -30,26 +29,12 @@ function AddTransactions() {
     try {
       const response = await axios.post('http://192.168.166.218:5000/transactions', transactionData);
       console.log('Data saved successfully:', response.data);
-      // Show success alert
-      Swal.fire({
-        title: 'Success!',
-        text: 'Transaction added successfully.',
-        icon: 'success',
-        confirmButtonText: 'Ok'
-      });
       // Clear the form
       setTitle('');
       setAmount('');
       setCategory('');
     } catch (error) {
       console.error('Error saving data:', error);
-      // Show error alert
-      Swal.fire({
-        title: 'Error!',
-        text: 'Failed to add transaction.',
-        icon: 'error',
-        confirmButtonText: 'Ok'
-      });
     }
   };
 
